@@ -1,6 +1,6 @@
 {
-    "name": "levkopo/apikit",
-    "description": "Kit for api backend",
+    "name": "ppeco/apipp",
+    "description": "Library for api backend",
     "type": "library",
     "license": "Apache-2.0",
     "authors": [
