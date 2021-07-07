@@ -1,5 +1,5 @@
-# apikit
-Kit for api servers
+# ApiPP
+Library to simplify writing API
 
 ## Installation
 ```
