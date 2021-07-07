@@ -68,6 +68,7 @@ class ApiPP {
     }
 
     protected final function __construct() {}
+
     public static function create(): self {
         return new self();
     }
