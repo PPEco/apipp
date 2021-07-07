@@ -3,7 +3,7 @@ Kit for api servers
 
 ## Installation
 ```
-composer require levkopo/apikit
+composer require ppeco/apipp
 ```
 
 ## Example
