@@ -10,6 +10,8 @@ composer require ppeco/apipp
 ```php
 use apipp\ApiPP;
 
+require_once "vendor/autoload.php";
+
 ApiPP::create()
     ->method("hello_world", function(ApiPP $apiKit) {
         return "Hello, world!";
