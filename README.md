@@ -2,7 +2,7 @@
 Library to simplify writing API
 
 ## Installation
-```
+```shell
 composer require ppeco/apipp
 ```
 
