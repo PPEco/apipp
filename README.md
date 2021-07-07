@@ -8,13 +8,14 @@ composer require ppeco/apipp
 
 ## Example
 ```php
-use levkopo\apikit\ApiKit;
-ApiKit::create()
-    ->method("hello_world", function(ApiKit $apiKit) {
+use apipp\ApiPP;
+
+ApiPP::create()
+    ->method("hello_world", function(ApiPP $apiKit) {
         return "Hello, world!";
     })
-    ->method("hwp", function(ApiKit $apiKit) {
-        [$someKey] = $apiKit->params(["key"]);
+    ->method("hwp", function(ApiPP $apiKit) {
+        [$someKey] = $apiKit->get(["key"]);
         return "Key: $someKey";
     })
     ->start();

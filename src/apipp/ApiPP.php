@@ -1,10 +1,11 @@
 <?php
 
-namespace levkopo\apikit;
+namespace apipp;
 
 use JetBrains\PhpStorm\NoReturn;
 
-class ApiKit {
+class ApiPP {
+
     /**
      * @var callable[] Resolved methods
      */
@@ -34,7 +35,20 @@ class ApiKit {
      * @param string[] $needParameters Need parameters
      * @return array Parameters
      */
-    public function params(array $needParameters): array {
+    public function get(array $needParameters): array {
+        $response = [];
+        foreach($needParameters as $needParameter)
+            $response[] = $_GET[$needParameter]??
+                $this->error("Parameter $needParameter not resolved", 404);
+
+        return $response;
+    }
+
+    /**
+     * @param string[] $needParameters Need parameters
+     * @return array Parameters
+     */
+    public function post(array $needParameters): array {
         $response = [];
         foreach($needParameters as $needParameter)
             $response[] = $_GET[$needParameter]??
