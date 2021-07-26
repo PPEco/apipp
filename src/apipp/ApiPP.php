@@ -51,7 +51,7 @@ class ApiPP {
     public function post(array $needParameters): array {
         $response = [];
         foreach($needParameters as $needParameter)
-            $response[] = $_GET[$needParameter]??
+            $response[] = $_POST[$needParameter]??
                 $this->error("Parameter $needParameter not resolved", 404);
 
         return $response;
